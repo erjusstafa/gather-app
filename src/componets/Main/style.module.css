@@ -1,0 +1,27 @@
+ 
+
+.alertBanner {
+  background-color: #eb44b2;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alertBanner span {
+  font-size: 0.729vw;
+  line-height: 0.882vw;
+  font-weight: 400;
+}
+.alertBanner span a {
+  text-decoration: underline;
+}
+
+.alertText {
+  background-color: white;
+  color: #eb44b2;
+  border-radius: 1vw;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+}
+

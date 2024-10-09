@@ -1,0 +1,258 @@
+.registerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 100%;
+  height: auto;
+}
+
+.coupleImage {
+  width: 100%;
+  position: relative;
+}
+.coupleImage img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.registerFormContainer {
+  padding: 3.333vw 3.854vw;
+  width: 100%;
+}
+
+.roleSelectionContainer {
+  border: 1px solid #505050;
+  border-radius: 1vw;
+  padding: 1.25vw;
+  background-color: #F5169C0D;
+  margin: 0 auto;
+}
+
+.roleTitle {
+  font-size: 1.146vw;
+  color: #ff1493;
+  font-weight: 600;
+  margin-bottom: 1vw;
+}
+
+.roleOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.roleLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.938vw;
+  color: #000000;
+  margin-bottom: .9vw;
+  position: relative;
+  padding-left: 1.3vw;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioCustom {
+  width: 1.042vw;
+  height: 1.042vw;
+  border-radius: 50%;
+  border: 1px solid #06425B;
+  margin-right: .5vw;
+  position: absolute;
+  left: 0;
+}
+
+.radioInput:checked + .radioCustom {
+  background-color: transparent;
+  border-color: #ff1493;
+}
+
+.radioInput:checked + .radioCustom:after {
+  content: '';
+  margin: auto;
+  width: .5vw;
+  height: .5vw;
+  border-radius: 50%;
+  background: #ff1493;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.coupleImage {
+  display: flex;
+  justify-content: center;
+}
+
+.formWrapper {
+  padding: 2rem 1.5rem;
+}
+
+.signupForm {
+  margin: 1.563vw 0;
+}
+
+.signupForm h2 {
+  font-size: 1.563vw;
+  font-weight: 700;
+  line-height: 1.875vw;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2%;
+}
+
+.signupForm p {
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 1.167vw;
+  letter-spacing: -2%;
+}
+
+.formField {
+  margin-top: 1.563vw;
+}
+
+.formField label {
+  display: block;
+  color: #110d06;
+  font-weight: 600;
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
+  line-height: 1.25vw;
+  letter-spacing: -2%;
+}
+
+.formField select,
+.formField input {
+  padding: 0.625vw 1vw;
+  border: 1px solid #32323266;
+  border-radius: 0.5rem;
+  outline: none;
+  width: 100%;
+  font-size: 1vw;
+
+}
+
+.formField input::placeholder {
+  color: #231F20;
+ }
+
+.termsAndConditions {
+  margin: 1.563vw 0;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 1.167vw;
+}
+
+.termsAndConditions a {
+  color: #247FAF;
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: #F5169C;
+  color: white;
+  padding: 1vw 1.25vw;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 2.188vw 14rem ;
+}
+
+.divider hr {
+  flex-grow: 1;
+  border-color: #a1a1a1;
+}
+
+.divider span {
+  margin: 0 1rem;
+  color: #2f2f2f;
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1vw;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #323232;
+  padding: 1vw 1.25vw;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  justify-content: center;
+  color: #110d06;
+  font-weight: 600;
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
+  line-height: 1.25vw;
+  letter-spacing: -2%;
+  gap: 1vw;
+
+}
+
+.socialButton:hover {
+  background-color: #f3f4f6;
+}
+
+.loginLink {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 1.167vw;
+}
+
+.loginLink a {
+  color: #7e0c65;
+}
+
+/* Responsive Media Queries */
+
+/* Small Devices (Tablets, Large Phones) */
+@media (max-width: 768px) {
+  .registerContainer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+.formField input {
+  font-size:xx-small;
+}
+  .roleTitle, .termsAndConditions {
+    font-size: 1.5vw;
+    line-height: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .roleTitle, .termsAndConditions {
+    font-size: 2.5vw;
+  }
+
+  .divider {
+    margin: 2rem 0;
+  }
+
+  .socialButtons {
+    grid-template-columns: 1fr;
+  }
+
+}

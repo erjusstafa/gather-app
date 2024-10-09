@@ -1,0 +1,81 @@
+.bannerContainer {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+
+.textSection {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.textSection p {
+  width: 90%;
+  text-align: left;
+}
+.iconsSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2.813vw;
+}
+
+.iconGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 1.354vw;
+  justify-content: center;
+}
+
+.iconGroup p {
+  width: 50%;
+  text-align: left;
+}
+.iconCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ea4b8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.iconImage {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+  .textSection p {
+    width: 100%;
+    text-align: center;
+  }
+  .iconsSection {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .textSection {
+    font-size: 1.2rem;
+  }
+  .iconGroup {
+    display: flex;
+    flex-direction: column;
+  text-align: center;
+    gap: 1.354vw;
+  }
+}

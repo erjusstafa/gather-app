@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8.333vw;
+  background-color: white;
+}
+
+.logoContainer {
+  flex: 1;
+}
+
+.logo {
+  height: 40px; 
+}
+
+.nav {
+  flex: 2;
+  position: relative; 
+}
+
+.hamburger {
+  display: none; 
+  background: none;
+  border: none;
+   cursor: pointer;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.navList li {
+  margin: 0 1.5vw;
+}
+
+.navList a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+  font-size: 1vw;
+  line-height: 0.882vw;
+  font-weight: 400;
+}
+
+.navList a:hover {
+  color: #f5169c; 
+}
+
+.buttonContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signInButton {
+  font-size: 1vw;
+  line-height: 0.882vw;
+  font-weight: 400;
+  color: #000000;
+  margin-right: 2.604vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.getStartedButton {
+  background-color: #212121;
+  color: white;
+  width: 8.438vw;
+  height: 3.125vw;
+  border-radius: 5.208vw;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .navList {
+      margin: 0; 
+  }
+
+  .navList li {
+      margin: 0 0.5rem;
+  }
+
+  .navList a {
+      font-size: 0.9vw; 
+  }
+  .getStartedButton{
+    font-size:1vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navList {
+      display: none; 
+      flex-direction: column; 
+      position: absolute; 
+      top: 60px; 
+      left: 0;
+      width: 100%; 
+      z-index: 1000;
+      background-color: white; 
+  }
+
+  .navList.show {
+      display: flex; 
+  }
+
+  .hamburger {
+      display: block; 
+      color: #f5169c;
+      margin: 0 1rem;
+  }
+
+  .navList li {
+      margin: 0.5rem 0; 
+      text-align: center; 
+  }
+
+  .signInButton {
+    font-size: 1.5vw;
+    width: 100%;
+  }
+
+  .getStartedButton {
+    width: 100%;
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 1rem 4vw; 
+  }
+
+  .logo {
+      height: 30px; 
+  }
+
+  .navList a {
+      font-size: 0.8rem;
+  }
+}
