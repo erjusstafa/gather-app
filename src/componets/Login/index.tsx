@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from "./style.module.css";
 import gatherGamLogo from '../../assets/gatherGamLogo.svg';
 import coupleImg from '../../assets/coupleImg.svg';
@@ -11,12 +10,10 @@ function Login() {
 
     return (
         <div className={styles.container}>
-            {/* Left Side: Image */}
             <div className={styles.coupleImage}>
                 <img src={coupleImg} alt="Couple" />
             </div>
 
-            {/* Right Side: Auth Form */}
             <div className={styles.authFormContainer}>
                 <div className={styles.imageContainer}>
                     <img src={gatherGamLogo} alt="Gather Gam Logo" />

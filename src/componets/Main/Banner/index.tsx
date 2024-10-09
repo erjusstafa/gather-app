@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from "./styles.module.css";
 import light from "../../../assets/banner/light.svg";
 import star from "../../../assets/banner/star.svg";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./style.module.css";
 import blur from "../../../assets/home/blur.svg";
 import personOne from "../../../assets/home/personOne.png";
