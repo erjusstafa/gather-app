@@ -1,5 +1,5 @@
-import styles from './style.module.css'
-
+/* import styles from './style.module.css'
+ */
 function Features() {
   return (
     <div>Features</div>
