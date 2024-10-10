@@ -101,7 +101,7 @@
 }
 
 .signupForm h2 {
-  font-size: 1.4rem;
+  font-size: 1.87rem;
   font-weight: 700;
   line-height: 1.7rem;
   margin-bottom: 0.5rem;
@@ -116,7 +116,7 @@
 }
 
 .formField {
-  margin-top: 1.4rem;
+  margin-top: 1rem;
 }
 
 .formField label {
@@ -241,14 +241,12 @@
     padding: 2.5rem 3rem;
     width: 100%;
   }
-  .formField input {
-    font-size: xx-small;
-  }
+ 
 
   .roleTitle,
   .termsAndConditions {
-    font-size: 1.35rem;
-    line-height: 3.6rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -258,12 +256,7 @@
     padding: 2rem 1.5rem;
     width: 100%;
   }
-  .roleTitle,
-  .termsAndConditions {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    width: 100%;
-  }
+
 
   .divider {
     margin: 2rem 0;
