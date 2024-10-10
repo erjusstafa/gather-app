@@ -15,7 +15,7 @@ function Banner() {
                 <div className={styles.iconGroup}>
                     <div className={styles.iconCircle}>
                         <img
-                            src={light}// Add your SVG icons
+                            src={light}
                             alt="Connect Icon"
                             className={styles.iconImage}
                         />
@@ -25,7 +25,7 @@ function Banner() {
                 <div className={styles.iconGroup}>
                     <div className={styles.iconCircle}>
                         <img
-                            src={star} // Add your SVG icons
+                            src={star}
                             alt="Manage Icon"
                             className={styles.iconImage}
                         />

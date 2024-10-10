@@ -1,52 +1,43 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 8.333vw;
+  grid-template-columns: 25% auto 30% 0;
+  display: grid;
+  padding: 1rem 10rem;
   background-color: white;
-}
-
-.logoContainer {
-  flex: 1;
-}
-
-.logo {
-  height: 40px; 
+  align-items: center;
 }
 
 .nav {
-  flex: 2;
-  position: relative; 
+  text-align: center;
+  position: relative;
+  margin: auto;
 }
 
 .hamburger {
-  display: none; 
-  background: none;
-  border: none;
-   cursor: pointer;
+  display: none;
 }
 
 .navList {
   display: flex;
   list-style: none;
   justify-content: center;
+  justify-content: space-between;
+  max-width: 34.25rem;
 }
 
 .navList li {
-  margin: 0 1.5vw;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .navList a {
   text-decoration: none;
   color: #000;
   transition: color 0.3s;
-  font-size: 1vw;
-  line-height: 0.882vw;
-  font-weight: 400;
+  margin: 0 0.8rem;
 }
 
 .navList a:hover {
-  color: #f5169c; 
+  color: #f5169c;
 }
 
 .buttonContainer {
@@ -56,11 +47,11 @@
 }
 
 .signInButton {
-  font-size: 1vw;
-  line-height: 0.882vw;
+  font-size: 1rem;
+  line-height: 1.2rem;
   font-weight: 400;
   color: #000000;
-  margin-right: 2.604vw;
+  margin-right: 1.5rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -68,79 +59,101 @@
 .getStartedButton {
   background-color: #212121;
   color: white;
-  width: 8.438vw;
-  height: 3.125vw;
-  border-radius: 5.208vw;
+  font-size: 1rem;
+  width: 10.125rem;
+  height: 3.75rem;
+  border-radius: 6.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 /* Responsive Styles */
-@media (max-width: 1200px) {
+@media (max-width: 1420px) {
+  .header {
+    grid-template-columns: 25% 25% 40% auto;
+
+    padding: 1rem 5rem;
+  }
   .navList {
-      margin: 0; 
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
   }
 
+  .navList.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: #f5169c;
+    margin: 0 1rem;
+    text-align: left;
+  }
   .navList li {
-      margin: 0 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
   }
 
-  .navList a {
-      font-size: 0.9vw; 
+  .signInButton {
+    font-size: 1rem;
+    width: auto;
   }
-  .getStartedButton{
-    font-size:1vw;
+
+  .getStartedButton {
+    height: 2.5rem;
+    width: 8.125rem;
+
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    grid-template-columns: 30% 0  auto 10%;
+
+  }
   .navList {
-      display: none; 
-      flex-direction: column; 
-      position: absolute; 
-      top: 60px; 
-      left: 0;
-      width: 100%; 
-      z-index: 1000;
-      background-color: white; 
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
   }
 
   .navList.show {
-      display: flex; 
-  }
-
-  .hamburger {
-      display: block; 
-      color: #f5169c;
-      margin: 0 1rem;
-  }
-
-  .navList li {
-      margin: 0.5rem 0; 
-      text-align: center; 
+    display: flex;
   }
 
   .signInButton {
-    font-size: 1.5vw;
-    width: 100%;
+    font-size: 1rem;
+    width: auto;
   }
 
   .getStartedButton {
-    width: 100%;
-    font-size: 1.3vw;
+    height: 2rem;
+    width: 6.125rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-      padding: 1rem 4vw; 
-  }
+    padding: .5rem;
+    grid-template-columns: 30% 0  auto 10%;
 
-  .logo {
-      height: 30px; 
   }
-
   .navList a {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
+
 }

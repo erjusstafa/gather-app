@@ -1,57 +1,60 @@
 .heroSection {
   display: flex;
   justify-content: space-between;
-  padding: 1vw 8.333vw;
+  padding: 1rem 11.688rem;
   height: 100vh;
   align-items: center;
   background-color: #fff;
 }
+
 .mainHeading {
-  font-size: 4.271vw;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 5.208vw;
-  margin-bottom: 1vw;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+  width: 80%;
 }
 
 .subHeading {
   margin-bottom: 2rem;
   color: #666;
-  font-size: 1.146vw;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.875vw;
-  width: 90%;
+  line-height: 1.875rem;
+  width: 75%;
 }
 
 .formContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 2.5vw;
+  margin-bottom: 2.5rem;
 }
 
 .emailInput {
   padding: 0.75rem 1.25rem;
-  border-radius: 5.208vw;
+  border-radius: 3rem;
   border: none;
   outline: none;
-  width: 23.542vw;
-  height: 3.75vw;
-  font-size: 0.938vw;
+  width: 15rem;
+  height: 4.5rem;
+  font-size: 0.94rem;
   color: #333;
   background-color: #f5f5f5;
-  line-height: 1.875vw;
-  margin-right: 0.625vw;
+  line-height: 1.875rem;
+  margin-right: 0.5rem;
 }
 
 .getStartedButton {
   background-color: #d934a1;
   color: #fff;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5.208vw;
+  padding: 0 1.5rem;
+  border-radius: 3rem;
   cursor: pointer;
-  font-size: 0.938vw;
+  font-size: 0.94rem;
   transition: background-color 0.3s;
-  height: 3.75vw;
+  height: 4.5rem;
+  width: 11rem;
 }
 
 .getStartedButton:hover {
@@ -68,10 +71,10 @@
 }
 
 .avatarGroup img {
-  width: 3.125vw;
-  height: 3.125vw;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  margin-right: -1vw;
+  margin-right: -0.75rem;
 }
 
 .avatarWithText {
@@ -81,7 +84,7 @@
 
 .avatarWithText img {
   display: block;
-  width: 4.125vw;
+  width: 2.75rem;
 }
 
 .avatarText {
@@ -90,33 +93,48 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #000000;
-  font-size: 0.938vw;
+  font-size: 0.94rem;
 }
+
 .joinedText {
-  font-size: 0.729vw;
-  margin-left: 1.521vw;
+  font-size: 0.75rem;
+  margin-left: 1rem;
   color: #000000;
-  line-height: 0.938vw;
+  line-height: 0.94rem;
 }
 
 .placeholderContainer {
-  width: 28.75vw;
-  height: 28.75vw;
+  width: 34.563rem;
+  height: 34.563rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
+  .heroSection {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: auto;
+    padding: 0.5rem 5rem;
+  }
+
   .mainHeading {
-    font-size: 3vw;
+    font-size: 2.5rem;
+    width: 95%;
+    line-height: 3rem;
   }
 
   .emailInput {
-    width: 250px;
+    width: 70%;
+    height: 4rem;
   }
 
   .placeholderContainer {
     width: auto;
     height: auto;
+  }
+
+  .formContainer {
+    justify-content: space-between;
   }
 }
 
@@ -124,58 +142,72 @@
   .heroSection {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 0.5vw 4.333vw;
+    padding: 0.5rem 3rem;
     height: auto;
   }
 
   .mainHeading {
-    font-size: 4.5vw;
-    margin-top: 4vw;
+    font-size: 3rem;
+    margin-top: 2rem;
   }
 
   .subHeading {
     width: 100%;
   }
+
   .emailInput {
-    width: 100%;
-    padding: 0 1vw;
+    width: 90%;
+    padding: 0 1rem;
+    height: 3.5rem;
   }
 
   .getStartedButton {
     padding: 0;
-    width: 30%;
+    width: 50%;
+    height: 3.5rem;
   }
-   
 }
 
 @media (max-width: 480px) {
-    .heroSection {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 0.5vw 4.333vw;
-        height: auto;
-      }
+  .heroSection {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 0.2rem 3rem;
+    height: auto;
+  }
+
   .mainHeading {
-    font-size: 3vw;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
   .subHeading {
     width: 100%;
   }
- 
+
+  .formContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .emailInput {
+    width: 70%;
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
 
   .getStartedButton {
     padding: 0;
-    width: 30%;
+    width: 60%;
+    height: 2.5rem;
   }
 
-  .avatarGroup img {
-    width: 2.083vw;
-   }
+  /* .avatarGroup img {
+    width: 1.5rem;
+  } */
 
   .joinedText {
-    font-size: 0.875vw;
+    font-size: 0.875rem;
   }
-
-   
 }

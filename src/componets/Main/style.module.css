@@ -1,27 +1,55 @@
- 
-
 .alertBanner {
   background-color: #eb44b2;
   color: white;
-  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  height: 3.313rem;
 }
+
 .alertBanner span {
-  font-size: 0.729vw;
-  line-height: 0.882vw;
+  font-size: 0.875;
+  line-height: 1.5;
   font-weight: 400;
+  margin: 0.5rem;
 }
+
 .alertBanner span a {
   text-decoration: underline;
 }
 
 .alertText {
   background-color: white;
-  color: #eb44b2;
-  border-radius: 1vw;
-  padding: 0.2rem 0.5rem;
-  margin-right: 0.5rem;
+  color: #141214;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  width: auto;
+  height: 1.875rem;
+  width: 4.813rem;
+  text-align: center;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alertBanner {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .alertText {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    height: auto;
+  }
+  .alertBanner span {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .alertBanner span {
+    font-size: 1.2rem;
+  }
+}

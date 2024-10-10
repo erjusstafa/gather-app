@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import Logo from "../../../assets/mainlogo.svg"
 import styles from "./style.module.css"
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
-    const [isOpen, setIsOpen] = useState<boolean>(false); // State to manage menu open/close
+    const [isOpen, setIsOpen] = useState<boolean>(false); 
+
+    const navigation = useNavigate();
 
     const toggleMenu = (): void => {
         setIsOpen((prevState) => !prevState);
@@ -25,7 +28,7 @@ function Header() {
                     </ul>
                 </nav>
                 <div className={styles.buttonContainer}>
-                    <button className={styles.signInButton}>Sign in</button>
+                    <button onClick={() => navigation('/login')} className={styles.signInButton}>Sign in</button>
                     <button className={styles.getStartedButton}>Get started</button>
                     
                 </div>

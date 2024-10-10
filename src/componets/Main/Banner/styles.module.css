@@ -40,8 +40,8 @@
   text-align: left;
 }
 .iconCircle {
-  width: 80px;
-  height: 80px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   background-color: #ea4b8b;
   display: flex;
@@ -53,6 +53,32 @@
 .iconImage {
   width: 40px;
   height: 40px;
+}
+
+@media (max-width: 1200px) {
+  .textSection p {
+    width: 100%;
+    text-align: center;
+  }
+  .iconsSection {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .textSection {
+    font-size: 1.2rem;
+  }
+
+  .iconCircle {
+    width: 4.938rem;
+    height: 4.938rem;
+    border-radius: 50%;
+    background-color: #ea4b8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -75,7 +101,21 @@
   .iconGroup {
     display: flex;
     flex-direction: column;
-  text-align: center;
+    text-align: center;
     gap: 1.354vw;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  .iconCircle {
+    width: 4.938rem;
+    height: 4.938rem;
+    border-radius: 50%;
+    background-color: #ea4b8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 }

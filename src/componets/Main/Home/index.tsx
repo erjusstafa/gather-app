@@ -10,8 +10,8 @@ function Home() {
         <section className={styles.heroSection}>
             <div className={styles.textContainer}>
                 <h1 className={styles.mainHeading}>
-                    "Plan, Share, and <br />
-                    Celebrate Your Big <br />
+                    "Plan, Share, and  
+                    Celebrate Your Big 
                     Day in One Place"
                 </h1>
                 <p className={styles.subHeading}>

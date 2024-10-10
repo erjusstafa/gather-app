@@ -16,23 +16,23 @@
 }
 
 .registerFormContainer {
-  padding: 3.333vw 3.854vw;
+  padding: 3rem 3.5rem;
   width: 100%;
 }
 
 .roleSelectionContainer {
   border: 1px solid #505050;
-  border-radius: 1vw;
-  padding: 1.25vw;
+  border-radius: 0.9rem;
+  padding: 1.1rem;
   background-color: #F5169C0D;
   margin: 0 auto;
 }
 
 .roleTitle {
-  font-size: 1.146vw;
+  font-size: 1rem;
   color: #ff1493;
   font-weight: 600;
-  margin-bottom: 1vw;
+  margin-bottom: 0.9rem;
 }
 
 .roleOptions {
@@ -43,11 +43,11 @@
 .roleLabel {
   display: flex;
   align-items: center;
-  font-size: 0.938vw;
+  font-size: 0.85rem;
   color: #000000;
-  margin-bottom: .9vw;
+  margin-bottom: 0.8rem;
   position: relative;
-  padding-left: 1.3vw;
+  padding-left: 1.2rem;
   cursor: pointer;
   font-weight: 400;
 }
@@ -59,11 +59,11 @@
 }
 
 .radioCustom {
-  width: 1.042vw;
-  height: 1.042vw;
+  width: 0.94rem;
+  height: 0.94rem;
   border-radius: 50%;
   border: 1px solid #06425B;
-  margin-right: .5vw;
+  margin-right: 0.45rem;
   position: absolute;
   left: 0;
 }
@@ -76,8 +76,8 @@
 .radioInput:checked + .radioCustom:after {
   content: '';
   margin: auto;
-  width: .5vw;
-  height: .5vw;
+  width: 0.45rem;
+  height: 0.45rem;
   border-radius: 50%;
   background: #ff1493;
   position: absolute;
@@ -97,58 +97,58 @@
 }
 
 .signupForm {
-  margin: 1.563vw 0;
+  margin: 1.4rem 0;
 }
 
 .signupForm h2 {
-  font-size: 1.563vw;
+  font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1.875vw;
+  line-height: 1.7rem;
   margin-bottom: 0.5rem;
   letter-spacing: -2%;
 }
 
 .signupForm p {
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 1.167vw;
+  line-height: 1rem;
   letter-spacing: -2%;
 }
 
 .formField {
-  margin-top: 1.563vw;
+  margin-top: 1.4rem;
 }
 
 .formField label {
   display: block;
   color: #110d06;
   font-weight: 600;
-  font-size: 1vw;
-  margin-bottom: 0.5vw;
-  line-height: 1.25vw;
+  font-size: 0.9rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.15rem;
   letter-spacing: -2%;
 }
 
 .formField select,
 .formField input {
-  padding: 0.625vw 1vw;
+  padding: 0.55rem 0.9rem;
   border: 1px solid #32323266;
   border-radius: 0.5rem;
   outline: none;
   width: 100%;
-  font-size: 1vw;
-
+  font-size: 0.9rem;
 }
 
 .formField input::placeholder {
   color: #231F20;
- }
+}
 
 .termsAndConditions {
-  margin: 1.563vw 0;
+  margin: 1.4rem 0;
   font-weight: 500;
-  font-size: 1vw;
-  line-height: 1.167vw;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  width: 80%;
 }
 
 .termsAndConditions a {
@@ -160,7 +160,7 @@
   width: 100%;
   background-color: #F5169C;
   color: white;
-  padding: 1vw 1.25vw;
+  padding: 0.9rem 1.15rem;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -168,7 +168,7 @@
 .divider {
   display: flex;
   align-items: center;
-  margin: 2.188vw 14rem ;
+  margin: 2rem 14rem;
 }
 
 .divider hr {
@@ -179,14 +179,14 @@
 .divider span {
   margin: 0 1rem;
   color: #2f2f2f;
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
 .socialButtons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1vw;
+  gap: 0.9rem;
 }
 
 .socialButton {
@@ -194,18 +194,17 @@
   align-items: center;
   background-color: white;
   border: 1px solid #323232;
-  padding: 1vw 1.25vw;
+  padding: 0.9rem 1.15rem;
   border-radius: 0.5rem;
   cursor: pointer;
   justify-content: center;
   color: #110d06;
   font-weight: 600;
-  font-size: 1vw;
-  margin-bottom: 0.5vw;
-  line-height: 1.25vw;
+  font-size: 0.9rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.15rem;
   letter-spacing: -2%;
-  gap: 1vw;
-
+  gap: 0.9rem;
 }
 
 .socialButton:hover {
@@ -215,9 +214,9 @@
 .loginLink {
   margin-top: 1.5rem;
   text-align: center;
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-weight: 400;
-  line-height: 1.167vw;
+  line-height: 1rem;
 }
 
 .loginLink a {
@@ -226,25 +225,44 @@
 
 /* Responsive Media Queries */
 
-/* Small Devices (Tablets, Large Phones) */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .registerContainer {
     grid-template-columns: 1fr;
     height: auto;
   }
 
-.formField input {
-  font-size:xx-small;
+ 
 }
-  .roleTitle, .termsAndConditions {
-    font-size: 1.5vw;
-    line-height: 4vw;
+
+/* Small Devices (Tablets, Large Phones) */
+@media (max-width: 768px) {
+ 
+  .registerFormContainer {
+    padding: 2.5rem 3rem;
+    width: 100%;
+  }
+  .formField input {
+    font-size: xx-small;
+  }
+
+  .roleTitle,
+  .termsAndConditions {
+    font-size: 1.35rem;
+    line-height: 3.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  .roleTitle, .termsAndConditions {
-    font-size: 2.5vw;
+
+  .registerFormContainer {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+  .roleTitle,
+  .termsAndConditions {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 100%;
   }
 
   .divider {
@@ -254,5 +272,4 @@
   .socialButtons {
     grid-template-columns: 1fr;
   }
-
 }

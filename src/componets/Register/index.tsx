@@ -16,12 +16,10 @@ const Register: React.FC = () => {
 
     return (
         <div className={styles.registerContainer}>
-            {/* Left Side: Image */}
             <div className={styles.coupleImage}>
                 <img src={coupleImg} alt="Couple" />
             </div>
 
-            {/* Right Side: Registration Form */}
             <div className={styles.registerFormContainer}>
                 <div className={styles.formContent}>
                     <div className={styles.roleSelectionContainer}>
@@ -83,7 +81,6 @@ const Register: React.FC = () => {
                             <select id="region" required>
                                 <option value="Australia">Australia</option>
                                 <option value="United States">United States</option>
-                                {/* Add more regions as needed */}
                             </select>
                         </div>
                         <div className={styles.formField}>
