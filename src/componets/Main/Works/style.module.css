@@ -1,0 +1,134 @@
+/* General styling for the section */
+.howItWorksSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #212121;
+  background-image: url(/src/assets/works/line.svg);
+  background-repeat: no-repeat;
+  background-position-y: 15rem;
+  background-size: contain;
+
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 3.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.375rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #fff;
+  width: 55%;
+  margin: auto;
+}
+
+.featureFlow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.563rem;
+  margin-top: 3rem;
+  position: relative;
+  margin: 7.875rem auto;
+  justify-content: center;
+  padding: 0 9.125rem;
+}
+
+.featureBox {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  height: 18.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  text-align: left;
+  gap: 0.938rem;
+  z-index: 9999;
+}
+
+.featureBox h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.813rem;
+}
+
+.featureBox p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  width: 80%;
+  line-height: 1.5rem;
+}
+
+.highlighted {
+  background-color: #ffdef4;
+  color: #000;
+}
+
+.iconBox {
+  font-size: 2.75rem;
+  line-height: 3.313rem;
+}
+
+ 
+/* Responsive styling */
+
+@media (max-width: 1300px) {
+  .featureFlow {
+    padding: 0 2.125rem;
+  }
+  .howItWorksSection {
+    background-image: none;
+  }
+
+}
+@media (max-width: 1024px) {
+  .featureFlow {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2.125rem;
+  }
+  .howItWorksSection {
+    background-image: none;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    width: 90%;
+  }
+
+  .featureFlow {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .featureBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+ 
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .featureBox {
+    padding: 1.5rem;
+  }
+}

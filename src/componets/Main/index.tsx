@@ -4,6 +4,8 @@ import Header from "./Header";
 import Home from "./Home";
 import Banner from "./Banner";
 import Features from "./Features";
+import Works from "./Works";
+import PricingPlans from "./Pricing";
 function Main() {
     return (
         <>
@@ -18,6 +20,8 @@ function Main() {
             <Home />
             <Banner />
             <Features />
+            <Works />
+            <PricingPlans />
         </>
     );
 }
