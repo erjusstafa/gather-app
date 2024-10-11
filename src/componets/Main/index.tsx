@@ -6,6 +6,10 @@ import Banner from "./Banner";
 import Features from "./Features";
 import Works from "./Works";
 import PricingPlans from "./Pricing";
+import TestimonialSection from "./TestimonialSection";
+import FaqSection from "./FaqSection";
+import WeddingPlan from "./WeddingPlan";
+import Contact from "./Contact";
 function Main() {
     return (
         <>
@@ -22,6 +26,10 @@ function Main() {
             <Features />
             <Works />
             <PricingPlans />
+            <TestimonialSection />
+            <FaqSection/>
+            <WeddingPlan />
+            <Contact />
         </>
     );
 }

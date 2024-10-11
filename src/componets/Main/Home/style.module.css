@@ -1,16 +1,18 @@
 .heroSection {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 11.688rem;
-  height: 100vh;
+  padding: 8rem 11.688rem;
   align-items: center;
   background-color: #fff;
 }
 
+.container{
+  width: auto;
+}
 .mainHeading {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  line-height: 5rem;
+  line-height: 4rem;
   margin-bottom: 1rem;
   width: 80%;
 }
@@ -21,7 +23,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.875rem;
-  width: 75%;
+  width: 78%;
 }
 
 .formContainer {
@@ -36,7 +38,7 @@
   border: none;
   outline: none;
   width: 28.25rem;
-  height: 4.5rem;
+  height: 4rem;
   font-size: 0.94rem;
   color: #333;
   background-color: #f5f5f5;
@@ -53,7 +55,7 @@
   cursor: pointer;
   font-size: 0.94rem;
   transition: background-color 0.3s;
-  height: 4.5rem;
+  height: 4rem;
   width: 11rem;
 }
 
@@ -104,11 +106,28 @@
 }
 
 .placeholderContainer {
-  width: 34.563rem;
-  height: 34.563rem;
+ 
 }
 
 /* Responsive Styles */
+
+@media (max-width: 1300px) {
+
+  .emailInput{
+    width: 22.25rem;
+    height: 3.5rem;
+}
+.getStartedButton {
+  height: 3.5rem;
+  width: 9rem;
+}
+.mainHeading {
+  font-size: 2.5rem;
+  width: 95%;
+  line-height: 3rem;
+}
+
+}
 @media (max-width: 1200px) {
   .heroSection {
     flex-direction: column-reverse;
@@ -129,8 +148,7 @@
   }
 
   .placeholderContainer {
-    width: auto;
-    height: auto;
+    margin-bottom: 2rem;
   }
 
   .formContainer {

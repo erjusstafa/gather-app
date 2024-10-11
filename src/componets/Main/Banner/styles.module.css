@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #1f1f1f;
-  padding: 20px;
+  padding: 3.875rem 11.688rem;
   color: white;
   width: 100%;
 }
@@ -55,7 +55,17 @@
   height: 40px;
 }
 
+@media (max-width:1510px){
+  .bannerContainer {
+    grid-template-columns: 50% 50%;
+  }
+}
 @media (max-width: 1200px) {
+  .bannerContainer {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    padding: 1rem ;
+  }
   .textSection p {
     width: 100%;
     text-align: center;
@@ -85,29 +95,31 @@
   .bannerContainer {
     grid-template-columns: 1fr;
     margin-top: 1rem;
+    padding: 1rem ;
   }
   .textSection p {
     width: 100%;
     text-align: center;
   }
-  .iconsSection {
-    margin-top: 20px;
-    gap: 20px;
-  }
-
+ 
   .textSection {
     font-size: 1.2rem;
   }
+
+ 
   .iconGroup {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1.354vw;
-
-    width: 100%;
+    width: 100% ;
     text-align: center;
   }
-
+  .iconGroup p {
+     
+    width: 100% ;
+    text-align: center;
+  }
   .iconCircle {
     width: 4.938rem;
     height: 4.938rem;

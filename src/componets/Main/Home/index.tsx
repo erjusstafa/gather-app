@@ -8,7 +8,7 @@ import others from "../../../assets/home/others.png";
 function Home() {
     return (
         <section className={styles.heroSection}>
-            <div className={styles.textContainer}>
+            <div className={styles.container}>
                 <h1 className={styles.mainHeading}>
                     "Plan, Share, and  
                     Celebrate Your Big 
