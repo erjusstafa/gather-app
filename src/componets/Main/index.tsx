@@ -10,6 +10,7 @@ import TestimonialSection from "./TestimonialSection";
 import FaqSection from "./FaqSection";
 import WeddingPlan from "./WeddingPlan";
 import Contact from "./Contact";
+import Footer from "./Footer";
 function Main() {
     return (
         <>
@@ -30,6 +31,7 @@ function Main() {
             <FaqSection/>
             <WeddingPlan />
             <Contact />
+            <Footer/>
         </>
     );
 }

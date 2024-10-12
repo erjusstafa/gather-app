@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './componets/Login';
 import Register from './componets/Register';
 import Main from './componets/Main';
+import { AuthProvider } from './context';
 
 function App() {
 
   return (
+    <AuthProvider>
     <div className='main-container'>
       <Router>
         <Routes>
@@ -18,6 +20,7 @@ function App() {
  */}        </Routes>
       </Router>
     </div>
+    </AuthProvider>
   )
 }
 

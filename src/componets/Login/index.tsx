@@ -4,10 +4,43 @@ import coupleImg from '../../assets/coupleImg.svg';
 import apple from '../../assets/apple.svg';
 import fb from '../../assets/fb.svg';
 import google from '../../assets/google.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { ChangeEvent, useState } from "react";
+import { Services } from "../../services";
 
 function Login() {
 
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string>('');
+    const navigate = useNavigate();
+    const services = new Services();
+
+    const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setLoading(true);
+        setError('');
+    
+        try {
+            const response = await services.postAuth('auth/login', { email, password });
+            
+            if (response.error) {
+                setError(response.error);
+            } else {
+                localStorage.setItem('authToken', response.token); // Save token in local storage
+                console.log('Login successful:', response);
+                navigate('/'); 
+             }
+        } catch (err) {
+            setError('An error occurred during login.');
+            console.log("er",err);
+            
+        } finally {
+            setLoading(false);
+        }
+    };
+    
     return (
         <div className={styles.container}>
             <div className={styles.coupleImage}>
@@ -25,13 +58,16 @@ function Login() {
                             Enter your email address below to login to your existing account or sign up with a new account.
                         </p>
                     </div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className={styles.formField}>
                             <label htmlFor="email">Email Address</label>
                             <input
                                 type="email"
                                 id="email"
                                 placeholder="Enter email"
+                                value={email}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+
                                 required
                             />
                         </div>
@@ -41,12 +77,17 @@ function Login() {
                                 type="password"
                                 id="password"
                                 placeholder="Enter password"
+                                value={password}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+
                                 required
                             />
                         </div>
                         <button type="submit" className={styles.submitButton}>
-                            Get Started
+                        {loading ? 'Logging in...' : 'Get Started'}
                         </button>
+                        {error && <p className={styles.errorMessage}>{error}</p>} {/* Display error message */}
+
                         <div className={styles.divider}>
                             <hr />
                             <span>Or</span>

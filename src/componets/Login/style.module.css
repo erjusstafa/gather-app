@@ -143,6 +143,18 @@
   color: #7e0c65;
 }
 
+
+.errorMessage {
+  color: #d9534f; 
+  background-color: #f8d7da;  
+  border: 1px solid #f5c6cb;  
+  border-radius: 0.5rem;  
+  padding: 10px; 
+  margin: 10px 0;  
+  font-size: 0.9rem; 
+  text-align: center;  
+}
+
 /* Media Queries for Further Responsiveness */
 @media (max-width: 1200px) {
   .container {
