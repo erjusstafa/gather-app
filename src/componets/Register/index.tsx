@@ -7,8 +7,8 @@ import google from "../../assets/google.svg";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { Services } from "../../services";
-import { useNavigate } from "react-router-dom";
-type Role = "event-organizer" | "bride-groom";
+/* import { useNavigate } from "react-router-dom";
+ */type Role = "event-organizer" | "bride-groom";
 
 const Register: React.FC = () => {
 
