@@ -22,7 +22,7 @@ const Register: React.FC = () => {
     const [message, setMessage] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
     const services = new Services();
-    const navigate = useNavigate();
+/*     const navigate = useNavigate(); */
 
     const handleRoleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedRole(e.target.value as Role);
