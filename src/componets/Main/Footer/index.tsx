@@ -61,8 +61,9 @@ function Footer() {
                     </div>
                 ))}
             </div>
-            <hr className={styles.customHr} />
-
+            <span className={styles.spanHr} >
+                <hr className={styles.customHr} />
+            </span>
             <footer className={styles.footer}>
                 <div className={styles.footerLeft}>
                     <img src={logo} alt={'logo'} />
@@ -70,7 +71,7 @@ function Footer() {
                     <div className={styles.socialIcons}>
                         {
                             [tw, fb, link, you].map((icon, index: number) => {
-                                return <img src={icon} alt={`icon-${index}`} className={styles.icon} />;
+                                return <img key={index} src={icon} alt={`icon-${index}`} className={styles.icon} />;
                             })
                         }
                     </div>
@@ -109,6 +110,18 @@ function Footer() {
 
                 </div>
             </footer>
+            <div className={styles.footerEnd}>
+                <p>© {new Date().getFullYear()} GatherGram, We love our users!</p>
+                <p>Copyright © {new Date().getFullYear()} all rights reserved</p>
+                <div className={styles.links}>
+                    <a href="/terms">Terms & Conditions</a>
+                    <span>|</span>
+                    <a href="/privacy">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="/sitemap">Sitemap</a>
+                </div>
+            </div>
+
         </div>
     )
 }

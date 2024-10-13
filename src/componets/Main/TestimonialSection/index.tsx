@@ -31,6 +31,7 @@ const TestimonialSection = () => {
             {
               [one, two, three, four, five].map((item, index) => {
                 return <img
+                key={index}
                   src={item}
                   alt={`item-${index}`}
                   className={styles.image}

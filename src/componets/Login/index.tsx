@@ -7,40 +7,47 @@ import google from '../../assets/google.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { ChangeEvent, useState } from "react";
 import { Services } from "../../services";
+import { IoEyeOffOutline } from "react-icons/io5";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { useAuth } from "../../context";
 
 function Login() {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [showPassword, setShowPassword] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
     const navigate = useNavigate();
     const services = new Services();
+    const { login } = useAuth();
 
-    const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
         setError('');
-    
+
         try {
             const response = await services.postAuth('auth/login', { email, password });
-            
             if (response.error) {
                 setError(response.error);
             } else {
-                localStorage.setItem('authToken', response.token); // Save token in local storage
-                console.log('Login successful:', response);
-                navigate('/'); 
-             }
+                sessionStorage.setItem('authToken', response?.data?.accessToken);
+                login(response?.data?.accessToken);
+                navigate('/');
+            }
         } catch (err) {
             setError('An error occurred during login.');
-            console.log("er",err);
-            
+            console.log("er", err);
+
         } finally {
             setLoading(false);
         }
     };
-    
+
     return (
         <div className={styles.container}>
             <div className={styles.coupleImage}>
@@ -73,18 +80,28 @@ function Login() {
                         </div>
                         <div className={styles.formField}>
                             <label htmlFor="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                placeholder="Enter password"
-                                value={password}
-                                onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-
-                                required
-                            />
+                            <div className={styles.inputWrapper}>
+                                <input
+                                    id="password"
+                                    type={showPassword ? 'text' : 'password'}
+                                    value={password}
+                                    onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+                                    placeholder="Enter password"
+                                    className={styles.input}
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    onClick={togglePasswordVisibility}
+                                    className={styles.toggleButton}
+                                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                                >
+                                    {showPassword ? <MdOutlineRemoveRedEye /> : <IoEyeOffOutline />}
+                                </button>
+                            </div>
                         </div>
                         <button type="submit" className={styles.submitButton}>
-                        {loading ? 'Logging in...' : 'Get Started'}
+                            {loading ? 'Logging in...' : 'Get Started'}
                         </button>
                         {error && <p className={styles.errorMessage}>{error}</p>} {/* Display error message */}
 
