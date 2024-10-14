@@ -11,6 +11,11 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { useAuth } from "../../context";
 
+
+type User = {
+    fullName: string;
+    email: string;
+};
 function Login() {
 
     const [email, setEmail] = useState<string>('');
@@ -36,14 +41,14 @@ function Login() {
                 setError(response.error);
             } else {
                 sessionStorage.setItem('authToken', response?.data?.accessToken);
-                const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+                const storedUsers: User[] = JSON.parse(localStorage.getItem('users') || '[]');
                 const user = storedUsers.find((user) => user.email === email);
 
                 if (user) {
                     const { fullName } = user;
                     saveUserData(fullName, email);
                 }
-    
+
                 login(response?.data?.accessToken);
                 navigate('/');
             }
@@ -57,10 +62,10 @@ function Login() {
     };
 
 
-const saveUserData = (fullName: string, email: string) => {
-    const userData = [fullName, email];
-    localStorage.setItem('fullName', JSON.stringify(userData));
-};
+    const saveUserData = (fullName: string, email: string) => {
+        const userData = [fullName, email];
+        localStorage.setItem('fullName', JSON.stringify(userData));
+    };
     return (
         <div className={styles.container}>
             <div className={styles.coupleImage}>
