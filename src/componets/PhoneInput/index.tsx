@@ -7,10 +7,16 @@ interface PhoneInputProps {
     setPhoneNumber: (value: string) => void;
 }
 
+interface ICountryOptions {
+    code: string;
+    name: string;
+    dialCode: string;
+}
+
 const PhoneInput: React.FC<PhoneInputProps> = ({ phoneNumber, setPhoneNumber }) => {
     const [selectedCountryCode, setSelectedCountryCode] = useState<string>('AU'); 
 
-    const countryOptions = [
+    const countryOptions :ICountryOptions[]= [
         { code: 'AU', name: 'Australia', dialCode: '+61' },
         { code: 'US', name: 'United States', dialCode: '+1' },
         { code: 'GB', name: 'United Kingdom', dialCode: '+44' },
@@ -22,7 +28,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({ phoneNumber, setPhoneNumber }) 
         setSelectedCountryCode(e.target.value);
     };
 
-    const selectedCountry = countryOptions.find(country => country.code === selectedCountryCode);
+    const selectedCountry = countryOptions.find((country:ICountryOptions) => country.code === selectedCountryCode);
 
     return (
         <div className={styles.mobileNumberInputContainer}>

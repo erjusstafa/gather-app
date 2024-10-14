@@ -52,7 +52,7 @@
     outline: none;
     border-color: initial;
     box-shadow: none; 
-    background-color: transparent;
+    background:none;
   }
 label {
     display: block;

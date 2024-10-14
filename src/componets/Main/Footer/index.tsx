@@ -10,7 +10,6 @@ interface INewsletterContent {
     description: string;
     placeholder: string;
     buttonText: string;
-     
 }
 const newsletterContent:INewsletterContent[] = [
     {
@@ -20,7 +19,6 @@ const newsletterContent:INewsletterContent[] = [
         buttonText: 'Subscribe'
     }
 ];
-
 
 interface IFooterData {
     description: string;

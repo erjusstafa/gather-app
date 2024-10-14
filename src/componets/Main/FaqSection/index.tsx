@@ -7,8 +7,13 @@ import switchImg from "../../../assets/faq/switch.svg";
 import wallet from "../../../assets/faq/wallet.svg";
 import avatar from "../../../assets/faq/avatar.svg";
 
+interface IFaqData {
+    question: string;
+    answer: string;
+    icon: string;
+}
 
-const faqData = [
+const faqData :IFaqData[]= [
     {
         question: 'Is there a free trial available?',
         answer: 'Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.',
@@ -48,7 +53,7 @@ const FaqSection = () => {
             <p>Everything you need to know about the product and billing.</p>
 
             <div className={styles.faqContainer}>
-                {faqData.map((item, index) => (
+                {faqData.map((item:IFaqData, index:number) => (
                     <div key={index} className={styles.faqCard}>
                         <img src={item.icon} className={styles.icon} alt={`icon-${index}`} />
                         <h3>{item.question}</h3>

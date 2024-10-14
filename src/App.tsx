@@ -9,17 +9,15 @@ function App() {
 
   return (
     <AuthProvider>
-    <div className='main-container'>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-
-{/*           <Route path="*" element={<Navigate to="/login" />} />
- */}        </Routes>
-      </Router>
-    </div>
+      <div className='main-container'>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+       </Routes>
+        </Router>
+      </div>
     </AuthProvider>
   )
 }

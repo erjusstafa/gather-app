@@ -12,7 +12,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
  */import { useNavigate } from "react-router-dom";
 import RegionInput from "../RegionInput";
 import PhoneInput from "../PhoneInput";
- 
+
 type Role = "event-organizer" | "bride-groom";
 interface Message {
     text: string;
@@ -23,7 +23,7 @@ const Register: React.FC = () => {
     const [selectedRole, setSelectedRole] = useState<Role>("event-organizer");
     const [fullName, setFullName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
-   // const [region, setRegion] = useState<string>("");
+    // const [region, setRegion] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);

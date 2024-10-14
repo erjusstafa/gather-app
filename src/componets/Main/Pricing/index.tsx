@@ -2,8 +2,19 @@ import { useState } from "react";
 import styles from "./style.module.css";
 import check from "../../../assets/pricing/check.svg";
 
-// Data array containing pricing plans
-const plans = [
+interface IPlans{
+    name: string;
+    price: string;
+    period: string;
+    description: string;
+    details: string;
+    featuresOne: string[];
+    featuresTwo: string[];
+    buttonText: string;
+    isPopular?: boolean,
+}
+
+const plans:IPlans[] = [
     {
         name: "Basic plan",
         price: "00",
@@ -87,7 +98,7 @@ const PricingPlans = () => {
             </div>
 
             <div className={styles.planContainer}>
-                {plans.map((plan, index) => (
+                {plans.map((plan:IPlans, index:number) => (
                     <div key={index} className={styles.planCard}>
                         <div className={styles.headerPlanPrice}>
                             <div>

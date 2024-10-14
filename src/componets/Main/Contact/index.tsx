@@ -4,7 +4,13 @@ import sales from "../../../assets/contact/sales.svg";
 import support from "../../../assets/contact/support.svg";
 import visit from "../../../assets/contact/visit.svg";
 
-const contactInfo = [
+interface Contact{
+  title: string;
+  description: string;
+  contact: string;
+  icon: string;
+}
+const contactInfo:Contact[] = [
   {
     title: 'Chat to sales',
     description: 'Speak to our friendly team.',
@@ -40,7 +46,7 @@ const Contact = () => {
         <p className={styles.subtitle}>Our friendly team is always here to chat.</p>
       </div>
       <div className={styles.cards}>
-        {contactInfo.map((item, index) => (
+        {contactInfo.map((item:Contact, index:number) => (
           <div key={index} className={styles.card}>
             <img src={item.icon} alt={item.title} className={styles.cardIcon} />
             <div className={styles.cardContainer}>

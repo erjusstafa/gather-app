@@ -42,7 +42,7 @@ function Features() {
         reception."
       </p>
       <div className={styles.featuresGrid}>
-        {boxData.map((box, index) => (
+        {boxData.map((box:IBoxData, index:number) => (
           <div key={index} className={`${styles.featureBox} ${index === 1 ? styles.highlighted : ''}`}
           >
             <div className={styles.wraperBox}>
