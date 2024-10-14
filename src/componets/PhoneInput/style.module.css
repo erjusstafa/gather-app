@@ -17,7 +17,7 @@
 .select {
     margin-left: 1rem;  
     border: none;
-    background: transparent;
+    background: none;
     color: #A1A1A1;
     font-size: 14px;
     cursor: pointer;
