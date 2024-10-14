@@ -23,6 +23,13 @@
     cursor: pointer;
     outline: none;
 }
+
+.select:focus {
+  outline: none;
+  border-color: initial;
+  box-shadow: none; 
+  background-color: transparent;
+}
 .flag {
   width: 24px;
   height: 16px;

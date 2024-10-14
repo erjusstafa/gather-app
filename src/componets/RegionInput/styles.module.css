@@ -48,7 +48,12 @@
     font-size: 0.9rem;
     color: #A1A1A1;
 }
-
+.select:focus {
+    outline: none;
+    border-color: initial;
+    box-shadow: none; 
+    background-color: transparent;
+  }
 label {
     display: block;
     color: #110d06;
