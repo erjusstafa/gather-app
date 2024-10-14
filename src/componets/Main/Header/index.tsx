@@ -8,24 +8,33 @@ function Header() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const navigation = useNavigate();
     const { isAuthenticated } = useAuth();
-    const user = localStorage.getItem('fullName');
+
+    const user = (() => {
+        const storedUser = localStorage.getItem('fullName');
+        try {
+            const parsedUser = JSON.parse(storedUser || '[]');
+            return Array.isArray(parsedUser) ? parsedUser[0] : parsedUser;
+        } catch {
+            return storedUser || ''; 
+        }
+    })();
 
     const toggleMenu = () => {
         setIsOpen((prevState) => !prevState);
     };
 
-     useEffect(() => {
+    useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth > 768) {
                 setIsOpen(false);
             }
         };
-         window.addEventListener('resize', handleResize);
-          return () => {
+        window.addEventListener('resize', handleResize);
+        return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
+     
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
@@ -52,7 +61,7 @@ function Header() {
                     }} 
                     className={styles.signInButton}
                 >
-                    {isAuthenticated ? `Welcome ${user === null ? 'User' : user}!` : 'Sign in'}
+                    {isAuthenticated ? `Welcome ${user || 'User'}!` : 'Sign in'}
                 </button>
                 <button className={styles.getStartedButton}>
                     {isAuthenticated ? 'Go to Portal' : 'Get started'}

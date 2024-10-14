@@ -36,18 +36,31 @@ function Login() {
                 setError(response.error);
             } else {
                 sessionStorage.setItem('authToken', response?.data?.accessToken);
+                const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+                const user = storedUsers.find((user) => user.email === email);
+
+                if (user) {
+                    const { fullName } = user;
+                    saveUserData(fullName, email);
+                }
+    
                 login(response?.data?.accessToken);
                 navigate('/');
             }
         } catch (err) {
             setError('An error occurred during login.');
-            console.log("er", err);
+            console.log("err", err);
 
         } finally {
             setLoading(false);
         }
     };
 
+
+const saveUserData = (fullName: string, email: string) => {
+    const userData = [fullName, email];
+    localStorage.setItem('fullName', JSON.stringify(userData));
+};
     return (
         <div className={styles.container}>
             <div className={styles.coupleImage}>

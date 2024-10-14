@@ -9,7 +9,7 @@ import { Services } from "../../services";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { IoEyeOffOutline } from "react-icons/io5";
 /* import PhoneInput from "../PhoneInput";
- */import { useNavigate } from "react-router-dom";
+ */import { Link, useNavigate } from "react-router-dom";
 import RegionInput from "../RegionInput";
 import PhoneInput from "../PhoneInput";
 
@@ -65,8 +65,6 @@ const Register: React.FC = () => {
         return true;
     };
 
-    console.log("phone", phoneNumber.length);
-
     // Phone number validation function
     const validatePhoneNumber = (phone: string): boolean => {
         const phonePattern =
@@ -82,7 +80,7 @@ const Register: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!validateForm()) {
-            console.log("weoweweijff");
+            console.log("");
         }
         setLoading(true);
         try {
@@ -93,9 +91,11 @@ const Register: React.FC = () => {
                 return;
             }
 
-            const fullNames = JSON.parse(localStorage.getItem('fullName') || '[]');
-            fullNames.push(fullName);
-            localStorage.setItem('fullName', JSON.stringify(fullNames));
+
+            // Save fullName and email as an array of objects in localStorage
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            users.push({ fullName, email });
+            localStorage.setItem('users', JSON.stringify(users));
 
             setMessage({ text: 'Registration successful! Redirecting to login...', isError: false });
             setTimeout(() => {
@@ -257,7 +257,7 @@ const Register: React.FC = () => {
                         </div>
 
                         <p className={styles.loginLink}>
-                            Already have an account? <a href="/login">Sign in</a>
+                            Already have an account? <Link to="/login">Sign in</Link>
                         </p>
                     </form>
                 </div>
