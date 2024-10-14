@@ -72,8 +72,8 @@ const PricingPlans = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <h5>Pricing</h5>
+        <div className={styles.container} id="pricing">
+            <h5>Pricing</h5> 
             <h2 className={styles.title}>Plans that fit your scale</h2>
             <p className={styles.subtitle}>
                 Simple, transparent pricing that grows with you. Try any plan free for

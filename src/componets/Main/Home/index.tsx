@@ -7,7 +7,7 @@ import personFour from "../../../assets/home/personFour.png";
 import others from "../../../assets/home/others.png";
 function Home() {
     return (
-        <section className={styles.heroSection}>
+        <section className={styles.heroSection} id="home">
             <div className={styles.container}>
                 <h1 className={styles.mainHeading}>
                     "Plan, Share, and  

@@ -13,7 +13,7 @@ interface IFaqData {
     icon: string;
 }
 
-const faqData :IFaqData[]= [
+const faqData: IFaqData[] = [
     {
         question: 'Is there a free trial available?',
         answer: 'Yes, you can try us for free for 30 days. Our friendly team will work with you to get you up and running as soon as possible.',
@@ -48,12 +48,12 @@ const faqData :IFaqData[]= [
 
 const FaqSection = () => {
     return (
-        <div className={styles.faqSection}>
+        <div className={styles.faqSection} id='about'>
             <h2>Frequently asked questions</h2>
             <p>Everything you need to know about the product and billing.</p>
 
             <div className={styles.faqContainer}>
-                {faqData.map((item:IFaqData, index:number) => (
+                {faqData.map((item: IFaqData, index: number) => (
                     <div key={index} className={styles.faqCard}>
                         <img src={item.icon} className={styles.icon} alt={`icon-${index}`} />
                         <h3>{item.question}</h3>

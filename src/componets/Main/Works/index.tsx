@@ -31,7 +31,7 @@ const boxData: IBoxData[] = [
 
 const Works = () => {
     return (
-        <section className={styles.howItWorksSection}>
+        <section className={styles.howItWorksSection} id='works'>
             <h2 className={styles.title}>How It Works</h2>
             <p className={styles.subtitle}>
                 "Easily create and manage your wedding events, from the ceremony to the reception."

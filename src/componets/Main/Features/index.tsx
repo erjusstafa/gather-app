@@ -35,7 +35,7 @@ const boxData: IBoxData[] = [
 
 function Features() {
   return (
-    <section className={styles.featuresSection}>
+    <section className={styles.featuresSection} id="features">
       <h2 className={styles.title}>Our Features</h2>
       <p className={styles.subtitle}>
         "Easily create and manage your wedding events, from the ceremony to the

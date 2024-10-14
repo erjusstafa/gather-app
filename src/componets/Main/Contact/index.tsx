@@ -39,7 +39,7 @@ const contactInfo:Contact[] = [
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='contact'>
       <div className={styles.header}>
         <p className={styles.contactUs}>Contact us</p>
         <h2 className={styles.title}>We'd love to hear from you</h2>
