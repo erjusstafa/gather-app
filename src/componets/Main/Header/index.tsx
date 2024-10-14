@@ -1,21 +1,31 @@
-import { useState } from 'react'
-import Logo from "../../../assets/mainlogo.svg"
-import styles from "./style.module.css"
+import { useState, useEffect } from 'react';
+import Logo from "../../../assets/mainlogo.svg";
+import styles from "./style.module.css";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../context';
 
 function Header() {
-
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
     const navigation = useNavigate();
     const { isAuthenticated } = useAuth();
     const user = localStorage.getItem('fullName');
 
-
-    const toggleMenu = (): void => {
+    const toggleMenu = () => {
         setIsOpen((prevState) => !prevState);
     };
+
+     useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setIsOpen(false);
+            }
+        };
+         window.addEventListener('resize', handleResize);
+          return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <header className={styles.header}>
             <div className={styles.logoContainer}>
@@ -32,21 +42,27 @@ function Header() {
                 </ul>
             </nav>
             <div className={styles.buttonContainer}>
-                <button onClick={() => {
-                    if (isAuthenticated) {
-                        console.log(user);
-                    } else {
-                        navigation('/login')
-                    }
-                }} className={styles.signInButton}>{isAuthenticated ? `Welcome ${user === null ? 'User' : user}!` : 'Sign in'}</button>
-                <button className={styles.getStartedButton}>{isAuthenticated ? 'Go to Portal' : 'Get started'}</button>
-
+                <button 
+                    onClick={() => {
+                        if (isAuthenticated) {
+                            console.log(user);
+                        } else {
+                            navigation('/login');
+                        }
+                    }} 
+                    className={styles.signInButton}
+                >
+                    {isAuthenticated ? `Welcome ${user === null ? 'User' : user}!` : 'Sign in'}
+                </button>
+                <button className={styles.getStartedButton}>
+                    {isAuthenticated ? 'Go to Portal' : 'Get started'}
+                </button>
             </div>
             <button className={styles.hamburger} onClick={toggleMenu}>
                 {isOpen ? '✖' : '☰'}
             </button>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;

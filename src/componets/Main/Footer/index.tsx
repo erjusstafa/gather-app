@@ -4,7 +4,15 @@ import link from "../../../assets/footer/link.svg";
 import tw from "../../../assets/footer/tw.svg";
 import you from "../../../assets/footer/you.svg";
 import logo from "../../../assets/footer/logofooter.svg";
-const newsletterContent = [
+
+interface INewsletterContent {
+    title: string;
+    description: string;
+    placeholder: string;
+    buttonText: string;
+     
+}
+const newsletterContent:INewsletterContent[] = [
     {
         title: 'Join our newsletter',
         description: 'We’ll send you a nice letter once per week. No spam.',
@@ -14,7 +22,7 @@ const newsletterContent = [
 ];
 
 
-interface FooterData {
+interface IFooterData {
     description: string;
     navigationLinks: string[];
     supportLinks: string[];
@@ -25,8 +33,7 @@ interface FooterData {
     };
 }
 
-// Create the footer data object
-const footerData: FooterData = {
+const footerData: IFooterData = {
     description: "Medfysio provides clear and easy-to-understand health-related information resource or services.",
     navigationLinks: ["Home", "Features", "How It Works", "Pricing", "About", "Contact"],
     supportLinks: ["FAQ's", "Contact Us", "Support Center", "Security"],
@@ -42,7 +49,7 @@ function Footer() {
     return (
         <div>
             <div className={styles.newsletterContainer}>
-                {newsletterContent.map((item, index) => (
+                {newsletterContent.map((item:INewsletterContent, index:number) => (
                     <div key={index} className={styles.newsletter}>
                         <div className={styles.textContent}>
                             <h3 className={styles.title}>{item.title}</h3>
@@ -103,7 +110,7 @@ function Footer() {
                     </div>
                     <div className={styles.footerContact}>
                         <h2>Contact Us</h2>
-                        <p>{footerData.contactInfo.email}</p>
+                        <p >{footerData.contactInfo.email}</p>
                         <p>{footerData.contactInfo.phone}</p>
                         <button className={styles.helpCenter}>Help Center</button>
                     </div>

@@ -11,7 +11,8 @@ import { IoEyeOffOutline } from "react-icons/io5";
 /* import PhoneInput from "../PhoneInput";
  */import { useNavigate } from "react-router-dom";
 import RegionInput from "../RegionInput";
-
+import PhoneInput from "../PhoneInput";
+ 
 type Role = "event-organizer" | "bride-groom";
 interface Message {
     text: string;
@@ -22,8 +23,8 @@ const Register: React.FC = () => {
     const [selectedRole, setSelectedRole] = useState<Role>("event-organizer");
     const [fullName, setFullName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
-/*     const [region, setRegion] = useState<string>("");
- */    const [password, setPassword] = useState<string>("");
+   // const [region, setRegion] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [message, setMessage] = useState<Message>({ text: "", isError: false });
@@ -92,11 +93,9 @@ const Register: React.FC = () => {
                 return;
             }
 
-
             const fullNames = JSON.parse(localStorage.getItem('fullName') || '[]');
             fullNames.push(fullName);
             localStorage.setItem('fullName', JSON.stringify(fullNames));
-
 
             setMessage({ text: 'Registration successful! Redirecting to login...', isError: false });
             setTimeout(() => {
@@ -181,33 +180,8 @@ const Register: React.FC = () => {
                                 required
                             />
                         </div>
-                       {/*  <div className={styles.formField}>
-                            <label htmlFor="region">Region</label>
-                            <input
-                                value={region}
-                                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                                    setRegion(e.target.value)
-                                }
-                                type="tel"
-                                id="mobile"
-                                placeholder="+61"
-                            />
-                        </div> */}
-
                         <RegionInput />
-                        <div className={styles.formField}>
-                            <label htmlFor="phone">Phone number</label>
-                            <input
-                                value={phoneNumber}
-                                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                                    setPhoneNumber(e.target.value)
-                                }
-                                type="tel"
-                                id="phone"
-                                placeholder="+61"
-                            />
-                        </div>
-
+                        <PhoneInput phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} />
                         <div className={styles.formField}>
                             <label htmlFor="password">Password</label>
                             <div className={styles.inputWrapper}>

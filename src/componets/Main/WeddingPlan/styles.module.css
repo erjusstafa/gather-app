@@ -105,4 +105,20 @@
   .container {
     padding: 0.8rem;
   }
+  .wrapper {
+     
+    padding: 1rem;
+  }
+
+  .title{
+    font-size: 2rem;
+  }
+
+  
+.button {
+   padding: 7px 15px;
+  border-radius: 2.25rem;
+  font-size: 1rem;
+}
+
 }

@@ -8,7 +8,6 @@
 
 .nav {
   text-align: center;
-  position: relative;
   margin: auto;
 }
 
@@ -71,20 +70,20 @@
 @media (max-width: 1420px) {
   .header {
     grid-template-columns: 25% 25% 40% auto;
-
     padding: 1rem 5rem;
   }
   .navList {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 9.7rem;
     left: 0;
-    width: 100%;
+    width: fit-content;
+    padding: 0 3rem;
     z-index: 1000;
-    background-color: white;
+    background-color: #eb44b2;
+    color: white;
   }
-
   .navList.show {
     display: flex;
   }
@@ -99,7 +98,9 @@
     margin: 0.5rem 0;
     text-align: center;
   }
-
+  .navList a {
+     color: white;
+  }
   .signInButton {
     font-size: 1rem;
     width: auto;
@@ -108,7 +109,6 @@
   .getStartedButton {
     height: 2.5rem;
     width: 8.125rem;
-
     font-size: 1rem;
   }
 }
@@ -116,24 +116,27 @@
 @media (max-width: 768px) {
   .header {
     padding: 1rem;
-    grid-template-columns: 30% 0  auto 10%;
-
+    grid-template-columns: 30% 0 auto 10%;
   }
+
   .navList {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 9.7rem;
     left: 0;
-    width: 100%;
+    width: fit-content;
+    padding: 0 2rem;
     z-index: 1000;
-    background-color: white;
+    background-color: #eb44b2;
+    color: white;
   }
-
   .navList.show {
     display: flex;
   }
-
+  .navList a {
+    color: white;
+  }
   .signInButton {
     font-size: 1rem;
     width: auto;
@@ -148,12 +151,32 @@
 
 @media (max-width: 480px) {
   .header {
-    padding: .5rem;
-    grid-template-columns: 30% 0  auto 10%;
+    padding: 0.5rem;
+    grid-template-columns: 30% 0 auto 10%;
+  }
 
+  .navList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 9.7rem;
+    left: 0;
+    width: fit-content;
+    padding: 0 1rem;
+    z-index: 1000;
+    background-color: #eb44b2;
+    color: white;
   }
   .navList a {
     font-size: 0.8rem;
+    color: white;
   }
-
+  .signInButton {
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+  }
+  .getStartedButton {
+    width: 6.125rem;
+    font-size: 0.8rem;
+  }
 }

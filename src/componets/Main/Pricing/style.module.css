@@ -224,7 +224,7 @@
     .featureListWrapper,
     .planContainer {
         flex-direction: column;
-       }
+    }
 
   }
   
@@ -245,6 +245,11 @@
   
   /* For very small mobile screens */
   @media (max-width: 480px) {
+    .featureListWrapper,
+    .planContainer {
+      padding: 1rem;
+     }
+
     
     .title {
       font-size: 1.75rem;

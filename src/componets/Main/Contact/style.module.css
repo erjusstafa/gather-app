@@ -98,7 +98,7 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1rem;
   }
 
   .title {
@@ -108,4 +108,5 @@
   .subtitle {
     font-size: 0.9rem;
   }
+ 
 }

@@ -123,7 +123,7 @@
 
 @media (max-width: 480px) {
   .newsletterContainer {
-    padding: 3.5rem;
+    padding: 1rem;
   }
   .spanHr{
     padding: 0 3.25rem;
@@ -241,6 +241,8 @@
   margin: 0 5px;
 }
 
+ 
+
 /* Responsive Styles */
 @media (max-width: 1400px) {
   .footer {
@@ -298,9 +300,13 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 3.5rem;
+    padding: 1rem;
   }
   .footerEnd {
     padding: .2rem;
    }
+   .footerContact p:nth-child(2){
+    font-size: .6rem;
+    }
+    
 }

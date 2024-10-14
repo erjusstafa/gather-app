@@ -108,12 +108,8 @@
 
  
   .iconGroup {
-    display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 1.354vw;
-    width: 100% ;
-    text-align: center;
+
   }
   .iconGroup p {
      
